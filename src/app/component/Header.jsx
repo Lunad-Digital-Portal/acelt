@@ -9,9 +9,15 @@ export default function Header() {
   const handleToggle = () => {
     setMenuOpen((prev) => !prev);
   };
-
+const navlink=[
+  {label:"Home",link:"/"},
+  {label:"Products",link:"/pages/products"},
+  {label:"Projects",link:"/pages/projects"},
+  {label:"About",link:"/pages/about-us"},
+  {label:"Contact",link:"/pages/contact-us"},
+]
   return (
-    <header className="fixed top-0 left-0 right-0 flex  py-3 px-4 sm:px-10  font-[sans-serif] min-h-[70px] tracking-wide z-50">
+    <header className="sticky top-0 left-0 right-0 flex  py-3 px-4 sm:px-10  font-[sans-serif] min-h-[70px] tracking-wide z-50 text-transparent bg-clip bg-gray-50">
       <div className="flex flex-wrap items-center gap-5 justify-between w-full">
         {/* Logo */}
         <Link href="/">
@@ -24,12 +30,21 @@ export default function Header() {
           />
         </Link>
 
-        {/* Collapsible Menu */}
         <div
           className={`max-lg:hidden lg:block ${
             menuOpen ? 'block' : 'hidden'
           } max-lg:w-full max-lg:fixed max-lg:before:fixed max-lg:before:bg-black max-lg:before:opacity-50 max-lg:before:inset-0 max-lg:before:z-50`}
         >
+
+          {/* Collapsible Menu */}
+          {/* <div
+          className={`max-lg:hidden lg:block ${
+            menuOpen ? 'block' : 'hidden'
+          } max-lg:w-full max-lg:fixed max-lg:before:fixed max-lg:before:bg-black max-lg:before:opacity-50 max-lg:before:inset-0 max-lg:before:z-50`}
+        > */}
+
+
+
           {/* Close Button */}
           <button
             onClick={handleToggle}
@@ -46,7 +61,7 @@ export default function Header() {
           </button>
 
           {/* Menu Items */}
-          <ul className="lg:flex lg:justify-between lg:ml-14 lg:gap-x-5 max-lg:space-y-3 max-lg:fixed  max-lg:w-1/2 max-lg:min-w-[300px] max-lg:top-0 max-lg:left-0 max-lg:p-6 max-lg:h-full max-lg:shadow-md max-lg:overflow-auto z-50">
+          <ul className="lg:flex lg:justify-between lg:ml-14 lg:gap-x-5 max-lg:space-y-3 max-lg:fixed  max-lg:w-1/2 max-lg:min-w-[300px] max-lg:top-0 max-lg:left-0 max-lg:p-6 max-lg:h-full max-lg:shadow-md max-lg:overflow-auto z-50 ">
             <li className="mb-6 hidden max-lg:block">
               <Link href="/">
                 <Image
@@ -58,13 +73,13 @@ export default function Header() {
                 />
               </Link>
             </li>
-            {['Home', 'Team', 'Feature', 'Blog', 'About'].map((item) => (
-              <li key={item} className="max-lg:border-b max-lg:py-3 px-3 ">
+            {navlink.map((item,index) => (
+              <li key={index} className="max-lg:border-b max-lg:py-3 px-3 ">
                 <Link
-                  href="#"
-                  className="lg:hover:text-[#007bff] text-white block font-semibold text-[15px]"
+                  href={`${item.link}`}
+                  className="lg:hover:text-red-600 text-gray-800  block font-light text-[15px]"
                 >
-                  {item}
+                  {item.label}
                 </Link>
               </li>
             ))}
@@ -112,4 +127,3 @@ export default function Header() {
     </header>
   );
 }
-
