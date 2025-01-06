@@ -28,19 +28,19 @@ import Card from './Card';
 const Content = () => {
   const materials = [
     {
-      title: "Lorem ipsum",
+      title: "Pipes",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
       image: "/product1.jpeg",
       link: "/"
     },
     {
-      title: "Lorem ipsum",
+      title: "Bends, Fittings & Flanges",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
       image: "/product2.jpg",
       link: "/"
     },
     {
-      title: "Lorem ipsum",
+      title: "Barred Tees",
       description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
       image: "/product3.png",
       link: "/"
@@ -51,9 +51,9 @@ const Content = () => {
     <section className="py-16" id="building-materials-section">
       <div className="container mx-auto px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">FITTINGS/FLANGES</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-black uppercase mb-4">our products</h2>
           <h4 className="text-lg md:text-xl text-gray-600 mb-6 max-w-4xl mx-auto">
-          Ace Energy can meet your need with the most adaptable selection of industrial fittings and flanges Available material range as per ASTM/ASME, JIS, EN Carbon and Low Alloy, Low Temperature Stainless, Duplex and Super Duplex, Nickel and Super Alloy, Copper, Nickel, Titanium, Weld Overlay, Clad and Others.
+          At Ace Energy, we provide a wide range of high-quality products designed to meet the specific needs of industries such as Oil & Gas, Petrochemical, Power Generation, Marine, and more. Our product offerings ensure the reliability, durability, and performance required in critical industrial applications. We work with leading manufacturers and suppliers globally to deliver products that exceed expectations.
           </h4>
           <div className="flex justify-center items-center">
             <span className="inline-block w-16 h-1 bg-blue-500"></span>
