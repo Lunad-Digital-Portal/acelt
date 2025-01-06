@@ -7,17 +7,17 @@ const slides = [
   {
     image: "/background1.png",
     title: "YOUR PARTNER AT STRATEGIC CROSSROADS",
-    subtitle: "We intend to be a preferred business partner by being an effective and progressive solution provider. Our mission is to satisfy our customers."
+    subtitle: <div>We intend to be a preferred business partner by being an effective and progressive solution provider. Our mission is to satisfy our customers.</div>
   },
   {
     image: "/background2.jpg",
     title: "YOUR PARTNER AT STRATEGIC CROSSROADS",
-    subtitle: "We intend to be a preferred business partner by being an effective and progressive solution provider. Our mission is to satisfy our customers."
+    subtitle: <div>We intend to be a preferred business partner by being an effective and progressive solution provider. Our mission is to satisfy our customers.</div>
   },
   {
     image: "/background3.jpg",
     title: "YOUR PARTNER AT STRATEGIC CROSSROADS",
-    subtitle: "We intend to be a preferred business partner by being an effective and progressive solution provider. Our mission is to satisfy our customers."
+    subtitle: <div>We intend to be a preferred business partner by being an effective and progressive solution provider. Our mission is to satisfy our customers.</div>
   }
 ];
 
@@ -43,7 +43,7 @@ export default function HomeBanner() {
   useEffect(() => {
     const timer = setInterval(nextSlide, 5000);
     return () => clearInterval(timer);
-  }, []);
+  }, [nextSlide]);
 
   useEffect(() => {
     const timer = setTimeout(() => setAnimating(false), 500);

@@ -67,7 +67,7 @@ const ProductsPage = () => {
               Seamless and welded pipes in a variety of grades and coatings, designed to meet your project requirements.
             </p>
             <ul className="list-disc ml-5 mt-3 text-white">
-              <li>Available from 2" to 56" in various materials</li>
+              <li>Available from 2&quot; to 56&quot; in various materials</li>
               <li>Fusion Bonded Epoxy and Concrete Coatings</li>
               <li>Nickel, Titanium, and Alloy Clad Steel</li>
             </ul>
@@ -82,7 +82,7 @@ const ProductsPage = () => {
               Hot Induction bending is a precise process for high-performance bends, ensuring dimensional accuracy and repeatability.
             </p>
             <ul className="list-disc font-poppins ml-5 mt-3 text-white">
-              <li>Diameter Range: 2" to 64"</li>
+              <li>Diameter Range: 2&quot; to 64&quot;</li>
               <li>Various Material Options</li>
               <li>High Productivity & Precision</li>
             </ul>
