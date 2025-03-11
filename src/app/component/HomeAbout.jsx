@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect, useRef } from "react";
 
-export default function About() {
+export default function HomeAbout() {
   const [clientsCount, setClientsCount] = useState(0);
   const [projectsCount, setProjectsCount] = useState(0);
   const achievementsRef = useRef(null);
@@ -62,7 +62,7 @@ export default function About() {
   ];
 
   return (
-    <div>
+    <div className="mt-20">
       <div className="relative bg-black h-[800px]">
         <video
           className="absolute top-0 left-0 w-full h-full object-cover z-0"
@@ -102,7 +102,7 @@ export default function About() {
         </div>
       </div>
 
-      <section className="bg-gray-800 text-white py-6">
+      <section className="bg-red-600 text-white py-6">
         {/* Industries We Serve with Sliding Ribbon Effect */}
         <section className="mt-8 mb-5 text-white">
           <h2 className="text-3xl font-extralight uppercase mb-2 text-center">
@@ -116,7 +116,7 @@ export default function About() {
                 {industries.concat(industries).map((industry, index) => (
                   <div
                     key={index}
-                    className="flex-shrink-0 px-6 py-3 text-white font-medium text-xl shadow rounded-md border shadow-text text-shadow bg-gray-800 tracking-[0.1em]"
+                    className="flex-shrink-0 px-6 py-3 text-white font-medium text-xl shadow rounded-md border shadow-text text-shadow bg-red-600 tracking-[0.1em]"
                   >
                     {industry}
                   </div>
@@ -127,27 +127,9 @@ export default function About() {
         </section>
       </section>
 
-      <section className="bg-white text-gray-800 py-12">
-        <div className="max-w-6xl mx-auto text-center">
-          {/* What We Do*/}
-          <div className="mb-5">
-            <h3 className="text-3xl font-normal mb-4">WHAT WE DO:</h3>
-            <p className="text-lg leading-relaxed max-w-3xl mx-auto">
-              We specialize in delivering high-quality engineering solutions, focusing on the supply, procurement, project management, and delivery of critical industrial materials and services.
-            </p>
-          </div>
-
-          {/* Our Products & Services Section */}
-          <div>
-            <div className="grid text-lg font-medium">
-              <div>We provide a range of high-quality industrial services, including cladding, mechanical lined pipes, fabrications, heat treatment, machining, and site welding and installation. Our expertise ensures precision and reliability in every project, delivering tailored solutions to meet the most demanding requirements.</div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Achievements Strip Section */}
-      <section ref={achievementsRef} className="bg-red-800 border-t-red-600 border-t-2 text-white py-6">
+      <section ref={achievementsRef} className="bg-red-600 mt-20 border-t-red-600 border-t-2 text-white py-6">
         <div className="max-w-6xl mx-auto text-center">
           <div className="flex justify-center items-center">
             <div className="">
