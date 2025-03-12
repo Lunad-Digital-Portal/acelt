@@ -3,6 +3,7 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useMediaQuery } from "../hooks/useMediaQuery";
+import AnimatedSection from "./AnimatedSection";
 
 export default function AccordionSlider({ slides }) {
   const [hoveredSlide, setHoveredSlide] = useState(null);
@@ -57,6 +58,7 @@ export default function AccordionSlider({ slides }) {
   };
 
   return (
+    <AnimatedSection>
     <div className="relative w-full" style={{ maxHeight: "630px" }}>
       <div
         className="relative w-full overflow-hidden"
@@ -108,5 +110,6 @@ export default function AccordionSlider({ slides }) {
         </ul>
       </div>
     </div>
+    </AnimatedSection>
   );
 }

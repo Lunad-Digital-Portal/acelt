@@ -1,5 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
+import AnimatedSection from './AnimatedSection';
 
 export default function Projects() {
 
@@ -57,6 +58,7 @@ const projects = [
         <meta name="description" content="Our Projects - Ace Energy" />
         
       </Head>
+      <AnimatedSection>
       <div className="bg-gray-100 py-12">
         <div className="container mx-auto px-4">
         
@@ -84,6 +86,7 @@ const projects = [
           </div>
         </div>
       </div>
+      </AnimatedSection>
     </>
   )
 }

@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
+import AnimatedSection from './AnimatedSection';
 
 const clientLogos = [
   {
@@ -66,6 +67,7 @@ const CompanyClients = () => {
   };
 
   return (
+    <AnimatedSection>
     <section className="container mx-auto px-8 py-12 flex justify-center items-center">
       <div className="grid md:grid-cols-10 gap-6 items-center">
         <div className="md:col-span-8">
@@ -157,6 +159,7 @@ const CompanyClients = () => {
           </div>
         </div>
     </section>
+    </AnimatedSection>
   );
 };
 

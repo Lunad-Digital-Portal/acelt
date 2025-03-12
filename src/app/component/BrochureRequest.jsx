@@ -1,9 +1,11 @@
 import React from 'react';
 import Link from 'next/link';
+import AnimatedSection from './AnimatedSection';
 
 const BrochureRequest = () => {
   return (
     <section className="container mx-auto px-8 py-12 bg-slate-100">
+        <AnimatedSection>
       <div className="grid md:grid-cols-12 gap-6 items-center">
         <div className="md:col-span-10">
           <div className="space-y-4">
@@ -26,6 +28,7 @@ const BrochureRequest = () => {
           </Link>
         </div>
       </div>
+        </AnimatedSection>
     </section>
   );
 };

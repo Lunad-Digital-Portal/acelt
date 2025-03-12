@@ -2,9 +2,11 @@ import React from 'react';
 import Link from 'next/link';
 import { FaFacebookF, FaInstagram,  FaYoutube, FaLinkedinIn } from 'react-icons/fa';
 import { FaXTwitter } from "react-icons/fa6";
+import AnimatedSection from './AnimatedSection';
 
 const Footer = () => {
   return (
+    <AnimatedSection>
     <footer className="bg-gray-900 text-white py-12">
       <div className="container mx-auto px-4">
         {/* Footer top - Logo and Links */}
@@ -75,6 +77,7 @@ const Footer = () => {
         </div>
       </div>
     </footer>
+    </AnimatedSection>
   );
 };
 

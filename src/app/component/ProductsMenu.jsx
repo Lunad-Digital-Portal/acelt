@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import AnimatedSection from './AnimatedSection'
 
 const ProductsPage = () => {
   return (
@@ -12,7 +13,7 @@ const ProductsPage = () => {
           rel="stylesheet"
         />
       </Head>
-      
+      <AnimatedSection>
       <main className="container mx-auto px-4 py-8 ">
         <section className="justify-center mb-12">
           
@@ -120,6 +121,7 @@ const ProductsPage = () => {
           
         </div>
       </main>
+      </AnimatedSection>
     </>
   )
 }

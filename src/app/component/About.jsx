@@ -1,5 +1,6 @@
 "use client";
 import React, { useState, useEffect, useRef } from "react";
+import AnimatedSection from "./AnimatedSection";
 
 export default function About() {
   const [clientsCount, setClientsCount] = useState(0);
@@ -63,6 +64,7 @@ export default function About() {
 
   return (
     <div>
+      <AnimatedSection>
       <div className="relative bg-black h-[800px]">
         <video
           className="absolute top-0 left-0 w-full h-full object-cover z-0"
@@ -101,7 +103,9 @@ export default function About() {
           </section>
         </div>
       </div>
+      </AnimatedSection>
 
+      <AnimatedSection>
       <section className="bg-gray-800 text-white py-6">
         {/* Industries We Serve with Sliding Ribbon Effect */}
         <section className="mt-8 mb-5 text-white">
@@ -126,7 +130,9 @@ export default function About() {
           </div>
         </section>
       </section>
+      </AnimatedSection>
 
+      <AnimatedSection>
       <section className="bg-white text-gray-800 py-12">
         <div className="max-w-6xl mx-auto text-center">
           {/* What We Do*/}
@@ -145,8 +151,10 @@ export default function About() {
           </div>
         </div>
       </section>
+      </AnimatedSection>
 
       {/* Achievements Strip Section */}
+      <AnimatedSection>
       <section ref={achievementsRef} className="bg-red-800 border-t-red-600 border-t-2 text-white py-6">
         <div className="max-w-6xl mx-auto text-center">
           <div className="flex justify-center items-center">
@@ -168,6 +176,7 @@ export default function About() {
           </div>
         </div>
       </section>
+      </AnimatedSection>
     </div>
   );
 }

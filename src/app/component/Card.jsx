@@ -1,10 +1,12 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import AnimatedSection from './AnimatedSection';
 
 const Card = ({ title, description, image, link }) => {
   return (
     <div className="relative overflow-hidden rounded-lg shadow-lg group cursor-pointer w-fit">
+      <AnimatedSection>
       <div className="relative h-96 w-fit ">
         <Image
           src={image}
@@ -24,6 +26,7 @@ const Card = ({ title, description, image, link }) => {
           Learn More
         </Link>
       </div>
+      </AnimatedSection>
     </div>
   );
 };

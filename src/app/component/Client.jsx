@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import AnimatedSection from './AnimatedSection';
 
 const clients = [
   { id: 1, image: "/logo.png" },
@@ -11,6 +12,7 @@ const clients = [
 
 const ClientsSection = () => {
   return (
+    <AnimatedSection>
     <section className="py-16 mx-auto" id="clients-section">
       <div className="container mx-auto px-4">
         <div className="flex flex-wrap justify-center">
@@ -45,6 +47,7 @@ const ClientsSection = () => {
         </div>
       </div>
     </section>
+    </AnimatedSection>
   );
 };
 

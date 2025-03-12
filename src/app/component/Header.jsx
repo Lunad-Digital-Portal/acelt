@@ -17,6 +17,7 @@ const navlink=[
   {label:"Contact",link:"/pages/contact-us"},
 ]
   return (
+    
     <header className="sticky top-0 left-0 right-0 flex  py-3 px-4 sm:px-10  font-[sans-serif] min-h-[70px] tracking-wide z-50 text-transparent bg-clip bg-gray-50">
       <div className="flex flex-wrap items-center gap-5 justify-between w-full">
         {/* Logo */}
