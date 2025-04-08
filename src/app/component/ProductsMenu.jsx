@@ -749,16 +749,16 @@ export default function ProductsPage() {
         />
       </Head>
 
-      <div className="bg-gray-100 my-2">
+      <div className="bg-gray-100 max-sm:my-10 ">
         {/* Hero Section with Animated Background - updated to dark gray and red */}
         <div className="relative overflow-hidden bg-gradient-to-r from-gray-800 to-gray-600 text-white ">
           <div className="absolute inset-0 mb-4">
-            <div className="absolute inset-0 bg-[url('/placeholder.svg?height=100&width=100')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]"></div>
+            {/* <div className="absolute inset-0 bg-[url('/placeholder.svg?height=100&width=100')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]"></div> */}
 
             {/* Animated gradient orbs - updated to red tones */}
-            <div className="absolute -top-24 -left-20 w-72 h-72 bg-red-700 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
+            {/* <div className="absolute -top-24 -left-20 w-72 h-72 bg-red-700 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
             <div className="absolute -bottom-24 left-48 w-72 h-72 bg-red-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
-            <div className="absolute -top-24 right-48 w-72 h-72 bg-gray-700 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-4000"></div>
+            <div className="absolute -top-24 right-48 w-72 h-72 bg-gray-700 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-4000"></div> */}
           </div>
 
           <div className="container mx-auto px-6 py-20 relative z-10">
