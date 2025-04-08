@@ -517,7 +517,7 @@ import { motion, AnimatePresence } from "framer-motion"
       layout
     >
       {/* Decorative elements - updated to red gradient */}
-      <div className="absolute -inset-0.5 bg-gradient-to-r from-red-600 to-red-800 rounded-xl blur opacity-0 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
+      <div className="absolute -inset-0.5 bg-gradient-to-r from-red-600 to-gray-900 rounded-xl blur opacity-0 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
 
       <motion.div
         className="relative bg-gray-900 rounded-xl overflow-hidden shadow-lg"
@@ -802,8 +802,8 @@ export default function ProductsPage() {
           </div>
         </div>
 
-        <AnimatedSection className="py-16 px-4 mt-5">
-          <div className="container mx-auto max-w-7xl">
+        <AnimatedSection className="lg:py-16 max-sm:p-2 lg:px-4 mt-5">
+          <div className="container lg:mx-auto max-w-7xl max-sm:p-2">
             {/* Filter and Search Section - updated to dark gray and red */}
             <div className="mb-12 flex flex-col md:flex-row justify-between items-center gap-6">
               <div className="flex flex-wrap gap-2">

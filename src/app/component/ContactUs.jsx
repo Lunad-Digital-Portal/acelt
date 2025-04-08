@@ -3,7 +3,7 @@ import ContactForm from './ContactForm';
 
 const ContactUs = () => {
     return (
-      <div className="max-w-7xl mx-auto p-6 bg-gray-800 min-h-screen lg:my-10 rounded-lg max-sm:my-10">
+      <div className="max-w-7xl mx-auto p-6 bg-gray-800 min-h-screen lg:my-10 rounded-xl max-sm:my-10 ">
         {/* Page Title */}
         <div className="flex">
         <h1 className="text-4xl md:text-5xl mb-8 border-b-2 border-red-600 font-normal text-white uppercase tracking-[0.1em]">Con </h1>
@@ -32,7 +32,7 @@ const ContactUs = () => {
           </div>
   
           {/* Google Map */}
-          <div className="rounded-lg overflow-hidden shadow-lg h-[220px]">
+          <div className="rounded-lg overflow-hidden shadow-lg h-[300px]">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434508616!2d144.9537353153187!3d-37.816279442021436!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d43f0ecaf4f%3A0xbbf9a0d2f8f1c1f4!2s123%20Example%20St%2C%20Cityville%2C%20Earth%20State%2012345!5e0!3m2!1sen!2sus!4v1630978303342!5m2!1sen!2sus"
               width="100%"
