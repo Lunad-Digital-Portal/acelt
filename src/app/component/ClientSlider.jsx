@@ -23,7 +23,31 @@ const clientLogos = [
   {
     src: "/logo.png",
     alt: "Client Logo 5",
-  }
+  },
+  {
+    src: "/logo.png",
+    alt: "Client Logo 6",
+  },
+  {
+    src: "/logo.png",
+    alt: "Client Logo 6",
+  },
+  {
+    src: "/logo.png",
+    alt: "Client Logo 6",
+  },
+  {
+    src: "/logo.png",
+    alt: "Client Logo 6",
+  },
+  {
+    src: "/logo.png",
+    alt: "Client Logo 6",
+  },
+  {
+    src: "/logo.png",
+    alt: "Client Logo 6",
+  },
 ];
 
 const CompanyClients = () => {
@@ -69,8 +93,8 @@ const CompanyClients = () => {
   return (
     <AnimatedSection>
     <section className="container mx-auto px-8 py-12 flex justify-center items-center">
-      <div className="grid md:grid-cols-10 gap-6 items-center">
-        <div className="md:col-span-8">
+      <div className="grid md:grid-cols-10 gap-6 items-center ">
+        <div className="col-span-10">
           <div className="mb-6">
             <h2 className="text-3xl font-bold text-gray-800 relative inline-block  flex justify-center items-center ">
               SOME OF OUR CLIENTS
@@ -81,16 +105,11 @@ const CompanyClients = () => {
           <div className="relative w-full overflow-hidden">
             <div 
               className="flex transition-transform duration-500 ease-in-out"
-              style={{ 
-                transform: `translateX(-${currentSlide * (100 / Math.ceil(clientLogos.length / clientsToShow))}%)`,
-                width: `${Math.ceil(clientLogos.length / clientsToShow) * 100}%`
-              }}
             >
               {Array.from({ length: Math.ceil(clientLogos.length / clientsToShow) }).map((_, groupIndex) => (
                 <div 
                   key={groupIndex} 
-                  className="grid grid-cols-4 gap-4 flex-shrink-0"
-                  style={{ width: `${100 / Math.ceil(clientLogos.length / clientsToShow)}%` }}
+                  className="grid grid-cols-4 gap-10 flex-shrink-0 max-sm:grid-cols-2 animate-scroll"
                 >
                   {clientLogos
                     .slice(groupIndex * clientsToShow, (groupIndex + 1) * clientsToShow)
@@ -117,20 +136,20 @@ const CompanyClients = () => {
           </div>
 
           {/* Navigation Buttons */}
-          <div className="flex justify-center mt-6 space-x-4">
+          {/* <div className="flex justify-center mt-6 space-x-4">
             <button 
               onClick={handlePrevSlide} 
-              className="p-2 bg-blue-500 rounded-full hover:bg-gray-300 transition"
+              className="p-3 bg-gray-900 rounded-full hover:bg-gray-300 transition"
             >
               ← Prev
             </button>
             <button 
               onClick={handleNextSlide} 
-              className="p-2 bg-blue-500 rounded-full hover:bg-gray-300 transition"
+              className="p-3 bg-gray-900 rounded-full hover:bg-gray-300 transition"
             >
               Next →
             </button>
-          </div>
+          </div> */}
 
           {/* Dot Indicators */}
           <div className="flex justify-center mt-4 space-x-2">
@@ -147,20 +166,11 @@ const CompanyClients = () => {
         </div>
 
       </div>
-        <div className="md:col-span-4 hidden md:block">
-          <div className="relative w-full aspect-square">
-            <Image
-              src="/product3.png"
-              alt="Prince"
-              width={300}
-              height={300}
-              className="object-cover rounded-lg shadow-lg"
-            />
-          </div>
-        </div>
     </section>
     </AnimatedSection>
   );
 };
 
 export default CompanyClients;
+
+

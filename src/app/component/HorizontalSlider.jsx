@@ -1,9 +1,7 @@
-// // "use client";
-// // import { useState, useEffect, useRef } from "react";
-// // import Image from "next/image";
-// // import Link from "next/link";
-// // import { motion, useAnimation, useTransform, useScroll } from "framer-motion";
-// // import { useMediaQuery } from "../hooks/useMediaQuery";
+// "use client";
+// import Image from "next/image";
+// import { useEffect, useRef } from "react";
+// import AnimatedSection from "./AnimatedSection";
 
 // const slider = [
 //     {
@@ -15,115 +13,105 @@
 //         title:"slider2"
 //     },
 //     {
-//         img:'/slider3.png',
+//         image:'/slider3.png',
+//         title : 'slider3'
+//     },
+//     {
+//         image:'/slider1.png',
+//         title : "slider1"
+//     },
+//     {
+//         image:'/slider2.png',
+//         title:"slider2"
+//     },
+//     {
+//         image:'/slider3.png',
 //         title : 'slider3'
 //     },
 // ]
-// "use client";
-// import { motion } from 'framer-motion';
-// import Image from 'next/image';
-// import React from 'react';
 
-// const slider = [
-//     { image: '/slider1.png', title: 'slider1' },
-//     { image: '/slider2.png', title: 'slider2' },
-//     { image: '/slider3.png', title: 'slider3' },
-// ];
+// export default function InfiniteSlider() {
+//   const logoListRef = useRef(null);
 
-// // const InfiniteSlider = () => {
-// //     return (
-// //         <div className="overflow-hidden w-full border-2 border-black bg-red-400">
-// //             <motion.div
-// //                 className="flex space-x-6"
-// //                 initial={{ x: 0 }}
-// //                 animate={{ x: '-100%' }}
-// //                 transition={{
-// //                     repeat: Infinity,
-// //                     ease: 'linear',
-// //                     duration: 15,
-// //                 }}
-// //             >
-// //                 {[...slider, ...slider].map((item, index) => (
-// //                     <div key={index} className="flex-shrink-0 w-[360px] h-44 relative ">
-// //                         <Image
-// //                             src={item.image}
-// //                             alt={item.title}
-// //                             layout="fill"
-// //                             objectFit="cover"
-// //                             className="rounded-lg w-full p-2 mix-blend-multiply"
-// //                         />
-// //                     </div>
-// //                 ))}
-// //             </motion.div>
-// //         </div>
-// //     );
-// // };
+//   useEffect(() => {
+//     if (logoListRef.current) {
+//       const scroller = logoListRef.current;
 
-// // export default InfiniteSlider;
+//       const scrollerInner = scroller.querySelector(".scroller__inner");
+//       const scrollerContent = Array.from(scrollerInner.children);
+//       scrollerContent.forEach((item) => {
+//         const duplicatedItem = item.cloneNode(true);
+//         duplicatedItem.setAttribute("aria-hidden", "true");
+//         scrollerInner.appendChild(duplicatedItem);
+//       });
+//       // Clone each item and append it to create the infinite scroll effect
 
-// const InfiniteSlider = () => {
-//     return (
-//         <div className="overflow-hidden w-full  bg-red-500 max-w-8xl ">
-//             <motion.div
-//                 className="flex space-x-8 mx-auto"
-//                 initial={{ x: 0 }}
-//                 animate={{ x: '-80%' }}
-//                 transition={{
-//                     repeat: Infinity,
-//                     ease: 'linear',
-//                     duration: 10,
-//                 }}
-//             >
-//                 {[...slider, ...slider].map((item, index) => (
-//                     <div key={index} className="flex-shrink-0 w-[360px] h-44 relative bg-red-400">
-//                         <Image
-//                             src={item.image}
-//                             alt={item.title}
-//                             layout="fill"
-//                             objectFit="cover"
-//                             className="rounded-lg w-full p-2 mix-blend-multiply"
-//                         />
-//                     </div>
-//                 ))}
-//             </motion.div>
-//         </div>
-//     );
-// };
+//       // const clone = ul.cloneNode(true);
+//       // clone.setAttribute('aria-hidden', 'true');
+//       // console.log("ul", ul.parentNode)
+//       // ul.parentNode.appendChild(clone);
+//     }
+//   }, []);
 
-// export default InfiniteSlider;
+//   return (
+//     <AnimatedSection>
+//     <div ref={logoListRef} className="w-full inline-flex  overflow-hidden bg-red-600 p-2">
+//       <ul className="scroller__inner flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-scroll">
+//         {slider?.length > 0 &&
+//           slider?.map((data, index) => (
+//             <li
+//               key={index}
+//               className="flex items-center justify-center md:justify-start gap-2 bg-red-600">
+//               <img
+//                 src={data.image}
+//                 alt={data?.alt}
+//                 className= "w-[250px] h-full object-contain mix-blend-multiply"
+//               />   
+//             </li>
+//           ))}
+//       </ul>
+//     </div>
+//     </AnimatedSection>
+//   );
+// }
 
-// remove clone array as of now we have only element that is why we are clonning now
 "use client";
-import Image from "next/image";
 import { useEffect, useRef } from "react";
 import AnimatedSection from "./AnimatedSection";
 
+// Reusable Slide Component
+const MDFMarvelCard = ({ number = "01" }) => {
+  return (
+    <div className="flex  min-w-[180px] p-1 bg-red-600 ">
+      <div className="flex flex-col">
+        <h2 className="text-base font-bold leading-tight text-white">
+          MDF Marvels
+        </h2>
+        <p className="mt-2 text-xs md:text-xs text-white max-w-[180px]">
+          Explore our range of trendsetting MDF panels, blending style and durability to redefine modern interiors.
+        </p>
+      </div>
+      {/* <div className="text-6xl font-bold text-white leading-none select-none hidden md:block border border-gray-700">
+        {number}
+      </div> */}
+<h2 className="text-6xl font-bold text-transparent text-outline flex justify-items-start ">
+{number}
+</h2>
+
+
+    </div>
+  );
+};
+
+// Slider data with component-based entries
 const slider = [
-    {
-        image:'/slider1.png',
-        title : "slider1"
-    },
-    {
-        image:'/slider2.png',
-        title:"slider2"
-    },
-    {
-        image:'/slider3.png',
-        title : 'slider3'
-    },
-    {
-        image:'/slider1.png',
-        title : "slider1"
-    },
-    {
-        image:'/slider2.png',
-        title:"slider2"
-    },
-    {
-        image:'/slider3.png',
-        title : 'slider3'
-    },
-]
+  { id: 1, component: <MDFMarvelCard number="01" /> },
+  { id: 2, component: <MDFMarvelCard number="02" /> },
+  { id: 3, component: <MDFMarvelCard number="03" /> },
+  { id: 4, component: <MDFMarvelCard number="04" /> },
+  { id: 5, component: <MDFMarvelCard number="05" /> },
+  { id: 6, component: <MDFMarvelCard number="06" /> },
+];
 
 export default function InfiniteSlider() {
   const logoListRef = useRef(null);
@@ -131,41 +119,30 @@ export default function InfiniteSlider() {
   useEffect(() => {
     if (logoListRef.current) {
       const scroller = logoListRef.current;
-
       const scrollerInner = scroller.querySelector(".scroller__inner");
       const scrollerContent = Array.from(scrollerInner.children);
+
+      // Duplicate each slide to create infinite scroll effect
       scrollerContent.forEach((item) => {
         const duplicatedItem = item.cloneNode(true);
         duplicatedItem.setAttribute("aria-hidden", "true");
         scrollerInner.appendChild(duplicatedItem);
       });
-      // Clone each item and append it to create the infinite scroll effect
-
-      // const clone = ul.cloneNode(true);
-      // clone.setAttribute('aria-hidden', 'true');
-      // console.log("ul", ul.parentNode)
-      // ul.parentNode.appendChild(clone);
     }
   }, []);
 
   return (
     <AnimatedSection>
-    <div ref={logoListRef} className="w-full inline-flex  overflow-hidden bg-red-600 p-2">
-      <ul className="scroller__inner flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-scroll">
-        {slider?.length > 0 &&
-          slider?.map((data, index) => (
-            <li
-              key={index}
-              className="flex items-center justify-center md:justify-start gap-2 bg-red-600">
-              <img
-                src={data.image}
-                alt={data?.alt}
-                className= "w-[250px] h-full object-contain mix-blend-multiply"
-              />   
+      <div ref={logoListRef} className="w-full overflow-hidden bg-red-600 p-4">
+        <ul className="scroller__inner flex items-center justify-start gap-12 animate-scroll">
+          {slider.map((slide, index) => (
+            <li key={index} className="flex-shrink-0">
+              {slide.component}
             </li>
           ))}
-      </ul>
-    </div>
+        </ul>
+      </div>
+      
     </AnimatedSection>
   );
 }

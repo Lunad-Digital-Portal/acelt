@@ -1,18 +1,3 @@
-// import Image from "next/image";
-// import HomeBanner from "./component/HomeBanner";
-// import Footer from "./component/Footer";
-// import Header from "./component/Header";
-
-// export default function Home() {
-//   return (
-//     <div>
-//       <Header/>
-//       <HomeBanner/>
-//       <Footer/>
-//     </div>
-//   );
-// }
-
 import HomeBanner from "./component/HomeBanner";
 import Footer from "./component/Footer";
 import Header from "./component/Header";

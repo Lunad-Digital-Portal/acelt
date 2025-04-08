@@ -120,14 +120,14 @@ const AddOnServices = () => {
 //     </section>
 //   );
 return (
-    <section className="py-12 px-6 bg-blue-200">
+    <section className="py-12 px-6 bg-gray-900 text-white">
       <div className="container mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           {/* Text Section */}
           <AnimatedSection>
           <div className='flex flex-col px-8'>
-            <h2 className="text-3xl font-bold text-gray-800 mb-4">Our Add-On Services</h2>
-            <p className="text-gray-600">
+            <h2 className="text-3xl font-bold text-gray-200 mb-4">Our Add-On Services</h2>
+            <p className="text-gray-200">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
             </p>
           </div>

@@ -22,7 +22,7 @@ const BrochureRequest = () => {
           <Link 
             href="/" 
             // target="_blank"
-            className="px-6 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors text-center inline-block"
+            className="px-6 py-3 bg-gray-900 text-white rounded-md hover:bg-gray-600 transition-colors text-center inline-block"
           >
             Download Now
           </Link>
