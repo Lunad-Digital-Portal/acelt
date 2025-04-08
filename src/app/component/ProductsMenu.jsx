@@ -749,7 +749,7 @@ export default function ProductsPage() {
         />
       </Head>
 
-      <div className="min-h-screen bg-gray-100  space-y-6">
+      <div className="bg-gray-100 my-2">
         {/* Hero Section with Animated Background - updated to dark gray and red */}
         <div className="relative overflow-hidden bg-gradient-to-r from-gray-800 to-gray-600 text-white ">
           <div className="absolute inset-0 mb-4">

@@ -128,7 +128,7 @@ export default function AnimatedSection({ children, delay = 0, className = "", d
   const ref = useRef(null)
   const isInView = useInView(ref, {
     once: true,
-    margin: "-100px",
+    margin: "0px",
     amount: 0.1, // Trigger animation earlier
   })
   const controls = useAnimation()

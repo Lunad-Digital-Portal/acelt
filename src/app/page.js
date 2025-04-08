@@ -17,21 +17,21 @@ export default function Home() {
       title: "Steel Products",
       description: "Products include steel pipes, fittings, flanges, sheets & valves.",
       image: "/background1.png",
-      link: "/steel-products",
+      link: "#",
     },
     {
       id: 2,
       title: "Copper Products",
       description: "Products include copper pipes, fittings, valves & accessories.",
       image: "/background2.jpg",
-      link: "/copper-products",
+      link: "#",
     },
     {
       id: 3,
       title: "PVC Products",
       description: "Products include Drainage Pipes, Pressure Pipes & Fittings, PE-X & PPR Pipes and Accessories.",
       image: "/background3.jpg",
-      link: "/pvc-products",
+      link: "#",
     },
     {
       id: 4,
@@ -39,14 +39,14 @@ export default function Home() {
       description:
         "Products include Power Tools, Hand Tools, Holesaws, Abrasives & Blades, Safety Products & Accessories.",
       image: "/background1.png",
-      link: "/tools-safety-products",
+      link: "#",
     },
     {
       id: 5,
       title: "Applications",
       description: "Products cater to the requirements of HVAC, Fire Fighting & Plumbing industries.",
       image: "https://apex.ae/wp-content/uploads/2015/10/applications-1500x630.jpg",
-      link: "#app",
+      link: "#",
     },
   ]
   
