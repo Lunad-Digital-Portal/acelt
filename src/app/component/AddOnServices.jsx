@@ -7,17 +7,35 @@ import AnimatedSection from './AnimatedSection';
 const services = [
   {
     title: 'Lorem Ipsum',
-    image: '/Inspection.webp',
+    image: '/service1.jpg',
     link: '/',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
   },
   {
     title: 'Lorem Ipsum',
-    image: '/Inspection.webp',
+    image: '/service2.webp',
     link: '/',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
   }
 ];
+
+const data = [
+{  id:1,
+  content : "GAS PROCESSING PLANT"
+},
+{  id:2,
+  content : "OIL/LIQUID TREATMENT PLANT"
+},
+{  id:3,
+  content : "SEPARATION EQUIPMENT'S"
+},
+{  id:4,
+  content : "PRODUCED WATER TREATMENT UNIT"
+},
+{  id:5,
+  content : "WATER TREATMENT UNIT"
+},
+]
 
 const AddOnServices = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -125,12 +143,25 @@ return (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           {/* Text Section */}
           <AnimatedSection>
-          <div className='flex flex-col px-8'>
+          {/* <div className='flex flex-col px-8'>
             <h2 className="text-3xl font-bold text-gray-200 mb-4">Our Add-On Services</h2>
-            <p className="text-gray-200">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-          </div>
+            {
+              data.map((dat,idx)=>
+                <p className="text-gray-200" key={idx}>
+                  {dat.content}
+                  </p>
+              )
+            }
+          </div> */}
+          <div className="flex flex-col px-8 py-6 bg-gray-900 rounded-xl shadow-md">
+  <h2 className="text-3xl font-bold text-white mb-6">Our Add-On Services</h2>
+  <ul className="list-disc list-inside space-y-3 text-gray-300 text-lg">
+    {data.map((dat) => (
+      <li key={dat.id}>{dat.content}</li>
+    ))}
+  </ul>
+</div>
+
           </AnimatedSection>
 
           {/* Carousel Section */}

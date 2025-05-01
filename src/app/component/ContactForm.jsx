@@ -7,7 +7,7 @@ export default function ContactForm() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    phone: '+91',
+    phone: '+97',
     message: '',
   });
   const [errors, setErrors] = useState({});

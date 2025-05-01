@@ -20,8 +20,8 @@ const BrochureRequest = () => {
         
         <div className="md:col-span-2 flex justify-end max-sm:justify-center">
           <Link 
-            href="/" 
-            // target="_blank"
+            href="/brouchre.pdf" 
+            target="_blank"
             className="px-6 py-3 bg-gray-900 text-white rounded-md hover:bg-gray-600 transition-colors text-center inline-block"
           >
             Download Now

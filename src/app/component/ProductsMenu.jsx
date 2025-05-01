@@ -495,7 +495,7 @@
 "use client"
 
 import Head from "next/head"
-import { useState } from "react"
+import { useRef, useState } from "react"
 import AnimatedSection from "./AnimatedSection"
 // import ProductCard from "./product-card"
 import { Search, ChevronDown,ExternalLink, Star } from "lucide-react"
@@ -634,7 +634,9 @@ import { motion, AnimatePresence } from "framer-motion"
 
           {/* Card Footer */}
           <div className="mt-6 pt-4 border-t border-gray-800">
-            <motion.button
+            <motion.a 
+            href='/brouchre.pdf'
+            target="_blank"
               whileHover={{ scale: 1.05, x: 5 }}
               whileTap={{ scale: 0.95 }}
               className="flex items-center text-red-500 font-medium group"
@@ -643,7 +645,7 @@ import { motion, AnimatePresence } from "framer-motion"
               <motion.span animate={{ x: isHovered ? 5 : 0 }} transition={{ duration: 0.3 }}>
                 <ExternalLink className="ml-2 w-4 h-4" />
               </motion.span>
-            </motion.button>
+            </motion.a>
           </div>
         </div>
       </motion.div>
@@ -656,8 +658,139 @@ import { motion, AnimatePresence } from "framer-motion"
 
 export default function ProductsPage() {
   const [activeCategory, setActiveCategory] = useState("all")
+  const productRef = useRef(null);
+
+  const handleScroll = () => {
+    productRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
 
   const products = [
+
+    {
+      image: "/seamless-pipes.png",
+      title: "Seamless Pipes",
+      description:`Known for their strength and durability, our seamless pipes are ideal for high-pressure applications.
+Available in following material grades:`,
+      features: [
+        "Carbon Steel",
+         "Stainless Steel", "Alloy Steel",
+          "(Super) Duplex, Nickel Alloy"
+      ],
+      category: "materials",
+    },
+
+    {
+      image: "/pipes.png",
+      title: "Welded Pipes",
+      description:`Available in various specifications and perfect for applications where strength and corrosion resistance are crucial. Welded pipes are produced by welding the edges of steel plates or coils.
+Available in following material grades:`,
+      features: [
+        "Carbon Steel",
+         "Stainless Steel", "Alloy Steel",
+          "(Super) Duplex, Nickel Alloy"
+      ],
+      category: "materials",
+    },
+
+    {
+      image: "/fittings.png",
+      title: "Fittings",
+      description:
+        "AADTRA offers a diverse range of different high-quality fittings. Both Buttweld Fittings and Forged Fittings are included in our scope of supply.",
+      features: [
+        'Buttweld (BW) Fittings',
+         "Carbon Steel,Stainless Steel, Alloy Steel",
+        "(Super) Duplex, Nickel Alloy",
+        
+      ],
+      category: "materials",
+    },
+
+    {
+      image: "/forge-fittings.png",
+      title: "Forge Fittings",
+      description:
+        "Forged Fittings & Reinforced Branch Outlets and Flanged Branch outlets in all grades API Tubing and Casing Couplings.",
+      features: [
+        'Threaded steel fittings for steam and fire-fighting',
+        "Forged Fittings as per. ASME B16.11, BS 3799, MSS SP83, MSS SP79, MSS SP95 standards",
+      ],
+      category: "materials",
+    },
+
+    {
+      image: "/Branch Connections.png",
+      title: "Branch Connections",
+      description:`AADTRA Group's range of supply includes all different types of branch connections, where smaller pipes are required to connect to a larger main pipeline.
+Weldolets, Nipolets, Threadolets, Sockolets, Elbolets, Nipoflanges and Weldoflanges are included in our product program and can be supplied both fast-track from our stock locations or from new production with our partner manufacturers.`,
+      features: [
+        "Carbon Steel",
+         "Stainless Steel", "Alloy Steel",
+          "(Super) Duplex, Nickel Alloy"
+      ],
+      category: "materials",
+    },
+
+    {
+      image: "/flanges.png",
+      title: "Flanges",
+      description:
+        "Our extensive range of flanges and wide knowledge on these piping components allow us to be of support on any challenging project involving flanges.",
+      features: [
+        "Carbon Steel",
+         "Stainless Steel", "Alloy Steel",
+          "(Super) Duplex, Nickel Alloy"
+      ],
+      category: "materials",
+    },
+
+    {
+      image: "/product3.png",
+      title: "Pipeline Barred Tees",
+      description:`AADTRA Group has a strong expertise in the total project management of pipelines and pipeline materials.
+
+Typical products, such as Barred Tees, Valves, Hot Induction Bends, Isolation Joints (G-Joint) Spectacle Blinds, Pipe Coatings, Clad Pipes, large bore Flanges, Fasteners and Gaskets are all within our scope of supply to complete any project pipeline package.`,
+      features: [
+        "Pipe Coatings",
+        "Clad Pipes",
+        "Fasteners and Gaskets"
+      ],
+      category: "materials",
+    },
+
+    {
+      image: "/product2.jpg",
+      title: "Hot Induction Bends",
+      description:`Hot Induction bending is a largely automated process carried out by a high-performance bending machine in conjunction with inductive heating with precise temperature control.`,
+      features: ['Diameter Range: 2" to 64"', "Various Material Options", "High Productivity & Precision"],
+      category: "equipment",
+    },
+
+    {
+      image: "/gauges.jpeg",
+      title: "Pressure Gauges",
+      description:`AADTRA offers Process Control & Measuring Instruments & industrial technology solution provider. Our major products range includes Pressure, Temperature, Humidity, Level, Flow, Analyzers, Automation Products, Industrials Valves & Instrumentation Manifolds and Tube fittings and supply of all kinds of process control instruments.`,
+      features: [
+        "STANDARD FULL SS PRESSURE GAUGE",
+        "SOLID FRONT FULL SS PRESSURE GAUGE",
+        "PHENOL CASE SOLID FRONT PRESSURE GAUGE",
+      ],
+      category: "components",
+    },
+
+    {
+      image: "/valves.png",
+      title: "Valves",
+      description:`For the industries we serve we can deliver Valves as per API 6D and API 6Α.
+Other standards can be sourced upon demand.`,
+      features: [
+        "Type of Valves: Gate Valves, Globe, Check, Ball, Butterfly, Cryogenic, Plug valve - DBB",
+        "Operation: Manual & Remote Control",
+        "Material: Cast Iron, Carbon Steel (WCB, LCB), Carbon Moly (WC1, WC6, WC9, C5, C12), Stainless Steel (CF8, CF8C, CF8M, LC3), Bronze, Al-Bronze, Ni.Al Bronze, Inconel, Monel, Incoloy, Titanium",
+      ],
+      category: "components",
+    },
+
     {
       image: "/pressure-vessel.jpg",
       title: "Process Plant & Equipment",
@@ -682,50 +815,7 @@ export default function ProductsPage() {
       ],
       category: "materials",
     },
-    {
-      image: "/pipes-tubes.avif",
-      title: "Pipes & Tubing",
-      description:
-        "Seamless and welded pipes in a variety of grades and coatings, designed to meet your project requirements.",
-      features: [
-        'Available from 2" to 56" in various materials',
-        "Fusion Bonded Epoxy and Concrete Coatings",
-        "Nickel, Titanium, and Alloy Clad Steel",
-      ],
-      category: "materials",
-    },
-    {
-      image: "/tube-bends.webp",
-      title: "Hot Induction Bends & Barred Tees",
-      description:
-        "Hot Induction bending is a precise process for high-performance bends, ensuring dimensional accuracy and repeatability.",
-      features: ['Diameter Range: 2" to 64"', "Various Material Options", "High Productivity & Precision"],
-      category: "equipment",
-    },
-    {
-      image: "/flanges-fittings.jpg",
-      title: "Fittings & Flanges",
-      description:
-        "A wide selection of industrial fittings and flanges in various materials including Carbon, Stainless, and Alloys.",
-      features: [
-        "Butt Weld, Cast, and Forged Fittings",
-        "Outlet Fittings and Special Forgings",
-        "Materials: Carbon Steel, Duplex, Titanium, etc.",
-      ],
-      category: "components",
-    },
-    {
-      image: "/industrial-valves.jpg",
-      title: "Valves",
-      description:
-        "We offer a range of valves for industrial applications, including API 6D, API 6A, and customized solutions.",
-      features: [
-        "Gate, Globe, Check, Ball, Butterfly Valves",
-        "Pressure Classes: ANSI 150~2500, API 1000psi~10000psi",
-        "Materials: Carbon Steel, Stainless Steel, Inconel, Titanium",
-      ],
-      category: "components",
-    },
+
   ]
 
   const filteredProducts =
@@ -784,12 +874,14 @@ export default function ProductsPage() {
 
             <AnimatedSection direction="up" delay={0.4}>
               <div className="mt-8 flex flex-wrap gap-4">
-                <button className="px-6 py-3 bg-red-600 text-white rounded-full hover:bg-red-700 transition-colors font-medium shadow-lg hover:shadow-xl">
+                <button 
+                 onClick={handleScroll}
+                className="px-6 py-3 bg-red-600 text-white rounded-full hover:bg-red-700 transition-colors font-medium shadow-lg hover:shadow-xl">
                   Explore Products
                 </button>
-                <button className="px-6 py-3 bg-gray-800 text-white rounded-full hover:bg-gray-700 transition-colors font-medium border border-gray-700">
+                <a href="/pages/contact-us" className="px-6 py-3 bg-gray-800 text-white rounded-full hover:bg-gray-700 transition-colors font-medium border border-gray-700">
                   Contact Sales
-                </button>
+                </a>
               </div>
             </AnimatedSection>
 
@@ -822,7 +914,7 @@ export default function ProductsPage() {
                 ))}
               </div>
 
-              <div className="relative w-full md:w-64">
+              <div ref={productRef} className="relative w-full md:w-64 ">
                 <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                   <Search className="h-4 w-4 text-gray-400" />
                 </div>
@@ -854,13 +946,14 @@ export default function ProductsPage() {
                 <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
                   Our team of experts is ready to help you find the perfect products for your specific requirements.
                 </p>
-                <motion.button
+                <motion.a
+                href="/pages/contact-us"
                   className="px-8 py-4 bg-red-600 text-white rounded-full hover:bg-red-700 transition-colors font-medium shadow-lg hover:shadow-xl"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
                   Contact Our Team
-                </motion.button>
+                </motion.a>
               </div>
             </AnimatedSection>
           </div>

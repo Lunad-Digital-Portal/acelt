@@ -8,19 +8,22 @@ const Content = () => {
   const materials = [
     {
       title: "Pipes",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-      image: "/product1.jpeg",
+      description: `Known for their strength and durability, our seamless pipes are ideal for high-pressure applications.
+Available in following material grades: Carbon Steel, Stainless Steel, Alloy Steel,(Super) Duplex, Nickel Alloy`,
+      image: "/pipes.png",
       link: "/"
     },
     {
-      title: "Bends, Fittings & Flanges",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
-      image: "/product2.jpg",
+      title: "Pressure Gauges",
+      description: `AADTRA offers Process Control & Measuring Instruments & industrial technology solution provider. Our major products range includes Pressure, Temperature, Humidity, Level, Flow, Analyzers, Automation Products, Industrials Valves & Instrumentation Manifolds and Tube fittings and supply of all kinds of process control instruments.`,
+      image: "/gauges.jpeg",
       link: "/"
     },
     {
-      title: "Barred Tees",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
+      title: "Pipeline Barred Tees",
+      description: `AADTRA Group has a strong expertise in the total project management of pipelines and pipeline materials.
+
+Typical products, such as Barred Tees, Valves, Hot Induction Bends, Isolation Joints (G-Joint) Spectacle Blinds, Pipe Coatings, Clad Pipes, large bore Flanges, Fasteners and Gaskets are all within our scope of supply to complete any project pipeline package.`,
       image: "/product3.png",
       link: "/"
     }
@@ -68,7 +71,7 @@ const Content = () => {
         <p className="text-sm sm:text-base text-gray-600 mb-4 sm:mb-6 line-clamp-3">{description}</p>
         
         <a 
-          href={link} 
+          href="/pages/products"
           className="inline-flex items-center justify-between w-full group/link"
         >
           <span className="text-red-500 font-medium text-sm sm:text-base">Explore Details</span>
@@ -118,7 +121,7 @@ const Content = () => {
           
           <div className="mt-12 sm:mt-16 md:mt-20 text-center">
             <a 
-              href="/products" 
+              href="/pages/products" 
               className="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 rounded-full text-white bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 font-medium transition-all duration-300 shadow-lg hover:shadow-xl text-sm sm:text-base"
             >
               View All Products

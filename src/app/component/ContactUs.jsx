@@ -15,7 +15,7 @@ const ContactUs = () => {
           <div className="space-y-6">
             <div>
               <h2 className="text-xl font-semibold text-white tracking-[0.02em]">Our Address</h2>
-              <p className="text-gray-200">123 Street, City, 12345</p>
+              <p className="text-gray-200">Showroom 3 - M44 16th St - Musaffah - Musaffah Industrial - Abu Dhabi - United Arab Emirates</p>
             </div>
             <div>
               <h2 className="text-xl font-semibold text-white tracking-[0.02em]">Email</h2>
@@ -23,18 +23,19 @@ const ContactUs = () => {
             </div>
             <div>
               <h2 className="text-xl font-semibold text-white tracking-[0.02em]">Phone</h2>
-              <p className="text-gray-200">+1234567</p>
+              <p className="text-gray-200">+971 2 554 0676</p>
             </div>
             <div>
               <h2 className="text-xl font-semibold text-white tracking-[0.02em]">Working Hours</h2>
-              <p className="text-gray-200">Monday - Friday: 9:00 AM - 5:00 PM</p>
+              <p className="text-gray-200">Monday - Friday: 8:00 AM - 5:00 PM</p>
             </div>
           </div>
   
           {/* Google Map */}
           <div className="rounded-lg overflow-hidden shadow-lg h-[300px]">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434508616!2d144.9537353153187!3d-37.816279442021436!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d43f0ecaf4f%3A0xbbf9a0d2f8f1c1f4!2s123%20Example%20St%2C%20Cityville%2C%20Earth%20State%2012345!5e0!3m2!1sen!2sus!4v1630978303342!5m2!1sen!2sus"
+              // src="https://www.google.com/maps/dir/?api=1&destination=28.5210114,77.2565249" 
+               src="https://www.google.com/maps?q=24.450192,54.687574&z=15&output=embed"
               width="100%"
               height="400"
               allowFullScreen=""
